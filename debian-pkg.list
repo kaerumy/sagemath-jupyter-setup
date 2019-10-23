@@ -1,5 +1,6 @@
 tex-common
 sagemath-jupyter
+jupyter-notebook
 python3-pandas
 python3-scipy
 vim
