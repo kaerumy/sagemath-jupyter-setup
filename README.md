@@ -1,11 +1,13 @@
 # sagemath-jupyter-setup
-Notes and files to setup Debian unstable LXD or VM with Jupyter Notebook server for maths and data analysis
+Notes and files to setup Debian Unstable (sid) LXD or VM with Jupyter Notebook
+server for maths and data analysis
 
 ## Setup
 
 ### LXD
 
-On laptop with limited memory, LXD is faster and more memory efficient than VM.
+On laptop or desktop with limited memory, LXD is faster and more memory
+efficient than VM.
 
 For Ubuntu:
 
@@ -24,9 +26,21 @@ and faster repo. List of repos:
 
 https://www.debian.org/mirror/list
 
+### FreeBSD bhyve VM
+
+sagemath isn't ported to work on FreeBSD yet
+https://trac.sagemath.org/ticket/26249 so a VM with Debian
+Sid is needed.
+
+vm management `pkg install vm-bhyve`
+
+https://github.com/churchers/vm-bhyve
+
 ### Installing key packages
 
-sudo xargs -a debian-pkg.list apt install
+Updated packages of what I use are in this debian-pkg.list
+
+`sudo xargs -a debian-pkg.list apt install`
 
 Notes, tex-common installed first in package list, it's commonly breaks if
 installed at later stage as a dep due to different issues. 
@@ -35,7 +49,7 @@ installed at later stage as a dep due to different issues.
 
 Easiest way is to simply do ssh tunnel:
 
-`ssh -L 8888:localhost:8888 <ipaddress of server> 'jupyter notebook'
+`ssh -L 8888:localhost:8888 <ipaddress of server> 'jupyter notebook`
 
 If on LXD you can find the IP by doing `lxc list`
 
