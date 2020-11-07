@@ -13,7 +13,7 @@ For Ubuntu:
 
 Basics for LXD documentation here:
 
-https://help.ubuntu.com/lts/serverguide/lxd.html
+https://ubuntu.com/server/docs/containers-lxd
 
 `lxc launch images:debian/sid/default sagemath-jupyter`
 
