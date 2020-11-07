@@ -40,10 +40,10 @@ https://github.com/churchers/vm-bhyve
 
 Updated packages of what I use are in this debian-pkg.list
 
+`EXPORT LC_ALL=C`
 `sudo xargs -a debian-pkg.list apt install`
 
-Notes, tex-common installed first in package list, it's commonly breaks if
-installed at later stage as a dep due to different issues. 
+EXPORT LC_ALL is to fix issue with initial installation of texlive-base.
 
 ### Accessing Jupyter Notebooka on server or LXC
 
