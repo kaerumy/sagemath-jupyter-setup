@@ -38,14 +38,14 @@ https://github.com/churchers/vm-bhyve
 
 ### Installing key packages
 
-Updated packages of what I use are in this debian-pkg.list
+Packages of what I use are in this debian-pkg.list
 
-`EXPORT LC_ALL=C`
-`sudo xargs -a debian-pkg.list apt install`
+    EXPORT LC_ALL=C
+    sudo xargs -a debian-pkg.list apt install
 
 EXPORT LC_ALL is to fix issue with initial installation of texlive-base.
 
-### Accessing Jupyter Notebooka on server or LXC
+### Accessing Jupyter Notebook on server or LXC
 
 Easiest way is to simply do ssh tunnel:
 
